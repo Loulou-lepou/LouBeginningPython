@@ -55,4 +55,4 @@ if __name__ == '__main__':
     # 2250, 154  / 1071, 462
     a1, b1 = map(int, input('').split(' '))
     d, s, t = gcd(a1, b1)
-    print(f'gcd is a linear combination: gcd({a1}, {b1}) = {d} = {s} * {a1} + {t} *{b1}')
+    print(f'gcd is a linear combination: gcd({a1}, {b1}) = {d} = {s} * {max(a1, b1)} + {t} *{min(b1, a1)}')
