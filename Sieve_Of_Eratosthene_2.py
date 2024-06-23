@@ -117,7 +117,7 @@ def sieve_of_eratosthenes_4(n):
 def sieve_of_eratosthenes_5(n):
     prime_check = [True for _ in range(1, n + 1)]
     for i in range(3, int(m.sqrt(n)) + 1, 2):
-        if prime_check:
+        if prime_check[i]:
             for j in range(i * i, n + 1, 2 * i):
                 prime_check[j] = False
 
