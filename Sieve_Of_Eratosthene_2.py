@@ -111,6 +111,20 @@ def sieve_of_eratosthenes_4(n):
     return prime_list
 
 
+# -------last reviewed 22 Jun 2024 ----------
+# define meaningful names for variables
+
+def sieve_of_eratosthenes_5(n):
+    prime_check = [True for _ in range(1, n + 1)]
+    for i in range(3, int(m.sqrt(n)) + 1, 2):
+        if prime_check:
+            for j in range(i * i, n + 1, 2 * i):
+                prime_check[j] = False
+
+    primes = [2] + [i for i in range(3, n + 1, 2) if prime_check[i]]
+    return primes
+    
+
 if __name__ == '__main__':
     n1 = int(input('n = '))
     print(f'Prime numbers up to {n1}:')
